@@ -1,7 +1,11 @@
 import Cake from "../component/Cake";
 import {useState} from 'react';
 const Bakery = () => {
-    // const[sum,setSum] = useState(0);
+    //  const[sum,setSum] = useState(0);
+
+    //  const sellCake = () =>{
+    //     setSum 
+    //  }
 
     const [victoriaSponge, setVictoriaSponge] = useState({
 		cakeName: "Victoria Sponge",
