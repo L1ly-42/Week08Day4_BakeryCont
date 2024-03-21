@@ -1,12 +1,13 @@
 import Bakery from "./container/Bakery";
+import "./App.css"
 
 
 function App() {
   return (
-    <>
-    <h1>Cakes for display:</h1>
+    <div>
+    <h1>Cakeeeeee 🍰 </h1>
     <Bakery/>
-    </>
+    </div>
   );
 }
 

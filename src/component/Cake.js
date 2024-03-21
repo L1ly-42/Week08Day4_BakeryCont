@@ -12,8 +12,8 @@ const Cake = ({cake}) => {
     
     return ( 
         <>
-        <h1> Cake name: {cake.cakeName} </h1>
-        <h2>Ingredients:</h2>
+        <h2> Cake name: {cake.cakeName} </h2>
+        <h3>Ingredients:</h3>
         <ul>
             {createNewItem()}
             {/* <li>{cake.ingredients.toString()}</li> */}
