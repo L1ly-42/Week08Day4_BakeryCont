@@ -1,12 +1,14 @@
 import Cake from "../component/Cake";
 import {useState} from 'react';
 import CakeForm from "../component/CakeForm";
+import SearchForm from "../component/SearchForm";
 const Bakery = () => {
     //  const[sum,setSum] = useState(0);
 
     //  const sellCake = () =>{
     //     setSum 
     //  }
+    const[filteredCakes, setFilteredCakes] = useState([])
     const [cakes, setCakes] = useState([
         
             {
@@ -33,6 +35,7 @@ const Bakery = () => {
 
     );
 
+
     const addCake = (newCake) =>{
         setCakes([...cakes, newCake])
         console.log(cakes)
@@ -41,10 +44,15 @@ const Bakery = () => {
     const cakeElements= cakes.map((cake, index) => {
         return <Cake cake={cake}  key={index}/>
     });
+
+    const filterCake = (filteredCakes)=>{
+        setFilteredCakes(filteredCakes)
+    }
     return ( 
         <>
         {cakeElements}
-        <CakeForm cakes = {cakes} addCake={addCake}/>
+        <CakeForm cakes = {cakes} addCake={addCake} />
+        <SearchForm cakes={cakes} filterCake={filterCake}/>
         </>
         
 

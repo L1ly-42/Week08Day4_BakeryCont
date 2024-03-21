@@ -7,8 +7,6 @@ const Cake = ({cake, index}) => {
                     <li>{item}</li>
                 )
             })   
-
-
     }
     
     return ( 
