@@ -41,16 +41,29 @@ const Bakery = () => {
         console.log(cakes)
     }
 
-    const cakeElements= cakes.map((cake, index) => {
-        return <Cake cake={cake}  key={index}/>
-    });
+
+
+    const filtering = () => {
+        
+        if(filteredCakes.length === 0){
+            return cakes.map((cake, index) => {
+                return <Cake cake={cake}  key={index}/>
+        
+            });
+        } else {
+            return filteredCakes.map((cake, index) => {
+                return <Cake cake={cake}  key={index}/>
+            });
+        }
+    }
 
     const filterCake = (filteredCakes)=>{
         setFilteredCakes(filteredCakes)
     }
+    
     return ( 
         <>
-        {cakeElements}
+        {filtering()}
         <CakeForm cakes = {cakes} addCake={addCake} />
         <SearchForm cakes={cakes} filterCake={filterCake}/>
         </>

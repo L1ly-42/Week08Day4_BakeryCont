@@ -1,10 +1,10 @@
-const Cake = ({cake, index}) => {
+const Cake = ({cake}) => {
    
    
     const createNewItem = () =>{ 
-        return cake.ingredients.map((item) =>{
+        return cake.ingredients.map((item, index) =>{
                 return(
-                    <li>{item}</li>
+                    <li key={index}>{item}</li>
                 )
             })   
     }

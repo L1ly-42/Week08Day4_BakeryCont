@@ -7,11 +7,7 @@ const SearchForm = ({cakes, filterCake}) => {
            
         // }
      const filteredCakes = cakes.filter((cake) => {
-        
-            if(cake.cakeName.toLowerCase() === searchTerm.toLowerCase()){
-                return cake;
-            }
-
+            return cake.cakeName.toLowerCase().includes(searchTerm.toLowerCase())
         })
         filterCake(filteredCakes)
 
