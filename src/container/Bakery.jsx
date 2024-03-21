@@ -2,6 +2,8 @@ import Cake from "../component/Cake";
 import {useState} from 'react';
 import CakeForm from "../component/CakeForm";
 import SearchForm from "../component/SearchForm";
+import "./Bakery.css"
+
 const Bakery = () => {
     //  const[sum,setSum] = useState(0);
 

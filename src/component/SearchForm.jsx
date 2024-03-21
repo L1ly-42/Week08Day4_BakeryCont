@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./SearchForm.css"
+
 const SearchForm = ({cakes, filterCake}) => {
     const [searchTerm,setSearchTerm] = useState("")
     const submitSearch = (e) => {

@@ -1,3 +1,4 @@
+import "./Cake.css"
 const Cake = ({cake}) => {
    
    
