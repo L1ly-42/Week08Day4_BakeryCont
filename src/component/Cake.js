@@ -1,4 +1,4 @@
-import "./Cake.css"
+
 const Cake = ({cake}) => {
    
    
@@ -11,7 +11,7 @@ const Cake = ({cake}) => {
     }
     
     return ( 
-        <>
+        <div className="cakeItem">
         <h2> Cake name: {cake.cakeName} </h2>
         <h3>Ingredients:</h3>
         <ul>
@@ -19,7 +19,7 @@ const Cake = ({cake}) => {
             {/* <li>{cake.ingredients.toString()}</li> */}
         </ul>
         <h3>Rating: {cake.rating}</h3>  
-        </>
+        </div>
        
      );
 }

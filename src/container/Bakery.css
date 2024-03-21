@@ -1,6 +1,5 @@
 h2{
     color: rgb(240, 184, 193);
-    padding-left: 50px;
     width: 60%;
 }
 
@@ -8,6 +7,10 @@ h2{
     padding-left: 40px;
     margin: auto;
     color: rgba(165, 42, 42, 0.531);
+
+    display:grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
 }
 
 .forms{
