@@ -1,6 +1,4 @@
-
-
-const Cake = ({cake}) => {
+const Cake = ({cake, index}) => {
    
    
     const createNewItem = () =>{ 
@@ -9,6 +7,8 @@ const Cake = ({cake}) => {
                     <li>{item}</li>
                 )
             })   
+
+
     }
     
     return ( 
@@ -17,8 +17,8 @@ const Cake = ({cake}) => {
         <h2>Ingredients:</h2>
         <ul>
             {createNewItem()}
+            {/* <li>{cake.ingredients.toString()}</li> */}
         </ul>
-        <h3>Price: £{cake.price}</h3>
         <h3>Rating: {cake.rating}</h3>  
         </>
        
