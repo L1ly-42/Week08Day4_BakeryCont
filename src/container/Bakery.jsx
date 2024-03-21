@@ -65,9 +65,13 @@ const Bakery = () => {
     
     return ( 
         <>
-        {filtering()}
-        <CakeForm cakes = {cakes} addCake={addCake} />
-        <SearchForm cakes={cakes} filterCake={filterCake}/>
+        <div className="forms">
+            <CakeForm cakes = {cakes} addCake={addCake} />
+            <SearchForm cakes={cakes} filterCake={filterCake}/>
+        </div>
+        <div className= "cakeList">
+            {filtering()}
+        </div>
         </>
         
 
