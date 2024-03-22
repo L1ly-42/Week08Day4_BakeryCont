@@ -5,11 +5,7 @@ import SearchForm from "../component/SearchForm";
 import "./Bakery.css"
 
 const Bakery = () => {
-    //  const[sum,setSum] = useState(0);
-
-    //  const sellCake = () =>{
-    //     setSum 
-    //  }
+    //UseStates
     const[filteredCakes, setFilteredCakes] = useState([])
     const [cakes, setCakes] = useState([
         
@@ -34,17 +30,21 @@ const Bakery = () => {
                 rating: 5
             }
           ]
-
     );
 
-
+    //Function for adding a new cake to the cake list
     const addCake = (newCake) =>{
         setCakes([...cakes, newCake])
         console.log(cakes)
     }
 
+    //function for assigning filtered cake list to the one set in search form submission
+    const filterCake = (filteredCakes)=>{
+        setFilteredCakes(filteredCakes)
+    }
 
-
+    //function that chooses a specific cake list to render based on if 
+    //user has used the search form
     const filtering = () => {
         
         if(filteredCakes.length === 0){
@@ -57,10 +57,6 @@ const Bakery = () => {
                 return <Cake cake={cake}  key={index}/>
             });
         }
-    }
-
-    const filterCake = (filteredCakes)=>{
-        setFilteredCakes(filteredCakes)
     }
     
     return ( 

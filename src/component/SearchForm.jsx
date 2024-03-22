@@ -2,18 +2,19 @@ import { useState } from "react";
 import "./SearchForm.css"
 
 const SearchForm = ({cakes, filterCake}) => {
+
+    //UseStates
     const [searchTerm,setSearchTerm] = useState("")
+
+    //Function that filters cake by the search term
     const submitSearch = (e) => {
         e.preventDefault()
-        // if(cakes.find(cake => cake.cakeName === searchTerm)){
-           
-        // }
      const filteredCakes = cakes.filter((cake) => {
             return cake.cakeName.toLowerCase().includes(searchTerm.toLowerCase())
         })
-        filterCake(filteredCakes)
-
+        filterCake(filteredCakes);
     }
+
     return ( 
       
         <form onSubmit={submitSearch}>
